@@ -1,16 +1,7 @@
 import { authMiddleware } from "@clerk/nextjs";
 
 export default authMiddleware({
-  publicRoutes: [
-    "/",
-    "/:slug",
-    "/integritetspolicy",
-    "/privacy/delete",
-    "/:locale/sign-in",
-    "/api/webhooks/clerk",
-    "/api/getAuthenticatedUserId",
-    "/api/uploadthing(.*)",
-  ],
+  publicRoutes: ["/"],
   afterAuth(auth, req, evt) {
     console.log("afterAuth");
     // console.log(auth);
