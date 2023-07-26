@@ -1,14 +1,13 @@
 "use client";
 
 import { useClerk } from "@clerk/nextjs";
-import { Button } from "~/components/ui/button";
 
 export const SignInButton = () => {
   const { openSignIn } = useClerk();
 
   return (
-    <Button
-      className="h-8"
+    <button
+      className="bg-primary text-primary-foreground shadow hover:bg-primary/90 p-4"
       onClick={() =>
         openSignIn({
           appearance: {
@@ -20,6 +19,6 @@ export const SignInButton = () => {
       }
     >
       Logga in
-    </Button>
+    </button>
   );
 };
