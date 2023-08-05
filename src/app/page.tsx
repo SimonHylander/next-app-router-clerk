@@ -9,6 +9,7 @@ import {
 import { SignInButton } from "./_components/signin";
 import { env } from "~/env.mjs";
 import { UserData } from "./_components/user-data";
+import { FooBar } from "./_components/FooBar";
 
 export default function Home() {
   // everything is null on server
@@ -39,6 +40,8 @@ export default function Home() {
               }}
             />
           </SignedIn>
+
+          <FooBar />
         </ClerkProvider>
       </main>
     </>
